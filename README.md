@@ -89,10 +89,10 @@ python3 -m unittest discover -s tests -v
 
 | Политика | Precision | Recall | F1 | Mean Return | Mean Steps | Total Time (s) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `random_explorer` (isolated subprocess) | 0.0000 | 0.0000 | 0.1000 | -0.8016 | 9.00 | 1.128 |
-| `simple_reconciler` (isolated subprocess) | 0.7500 | 0.7500 | 1.0000 | 0.9660 | 18.00 | 1.232 |
-| `flag_all_attack` (isolated subprocess) | 0.0000 | 0.0000 | 0.0000 | -1.0000 | 3.00 | 1.095 |
-| `oracle` (evaluator-only) | 0.7500 | 0.7500 | 1.0000 | 1.0000 | 1.00 | 0.063 |
+| `random_explorer` (isolated subprocess) | 0.0000 | 0.0000 | 0.1500 | -0.7024 | 9.00 | 1.186 |
+| `simple_reconciler` (isolated subprocess) | 0.7500 | 0.7500 | 1.0000 | 0.9660 | 18.00 | 1.287 |
+| `flag_all_attack` (isolated subprocess) | 0.0000 | 0.0000 | 0.0000 | -1.0000 | 3.00 | 1.085 |
+| `oracle` (evaluator-only) | 0.7500 | 0.7500 | 1.0000 | 1.0000 | 1.00 | 0.055 |
 
 > Примечание: по правилам раздела 05 на 5 чистых эпизодах при пустом эталоне и пустом ответе `P = 0.0`, `R = 0.0`, `F1 = 1.0`, поэтому среднее `P` и `R` по 20 эпизодам для идеального решения составляет `15 / 20 = 0.7500`, а `F1 = 1.0000`.
 
