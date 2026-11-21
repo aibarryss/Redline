@@ -658,11 +658,11 @@ class TestContractAndIsolation(unittest.TestCase):
         worker_user = os.environ.get("FINAUDIT_WORKER_USER", "").strip()
         has_worker_user = False
         if worker_user:
-            import pwd
             try:
+                import pwd
                 pwd.getpwnam(worker_user)
                 has_worker_user = True
-            except KeyError:
+            except (ImportError, KeyError):
                 has_worker_user = False
         if not has_worker_user or not hasattr(os, "geteuid") or os.geteuid() != 0:
             # Verify fallback still executes cleanly when non-root or worker user is absent

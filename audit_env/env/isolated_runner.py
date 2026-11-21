@@ -26,7 +26,10 @@ import io
 import json
 import math
 import os
-import pwd
+try:
+    import pwd
+except ImportError:
+    pwd = None  # type: ignore[assignment]
 import select
 import subprocess
 import sys
@@ -445,7 +448,7 @@ class IsolatedEvaluatorHarness:
     def _resolve_worker_popen_user(self, worker_cwd: str) -> dict[str, Any]:
         if not self._worker_user:
             return {}
-        if not hasattr(os, "geteuid") or os.geteuid() != 0:
+        if pwd is None or not hasattr(os, "geteuid") or os.geteuid() != 0:
             return {}
         try:
             pw = pwd.getpwnam(self._worker_user)
