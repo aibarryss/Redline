@@ -26,7 +26,7 @@
 | Надёжность награды (25 б.) | Инварианты награды, двудольный matcher с точным лексикографическим тай-брейкингом, допуск по сумме (`τ=0` по умолчанию), ошибки схемы (`-1.0`), таблица атак | `tests/test_reward_attacks.py`, `audit_env/scoring/matcher.py`, `audit_env/scoring/reward.py` | `python3 -m unittest tests.test_reward_attacks -v` |
 | Воспроизводимость и обобщение (15 б.) | Битовая воспроизводимость по `(seed, config, actions)` и 20 парных проверок инвариантности при перестановке строк и биективном ремаппинге ID | `tests/test_reproducibility_invariance.py`, `audit_env/generator/transforms.py` | `python3 -m unittest tests.test_reproducibility_invariance -v` |
 | Инженерия и объяснение (10 б.) | Единая офлайн-команда верификации (генерация `data/train` + `data/dev` + `trajectories.jsonl`, двухпроцессный бенчмарк 3 политик + evaluator-only oracle на 20 локальных отложенных эпизодах, прогон всех тестов) | `audit_env/verify.py` | `python3 -m audit_env.verify` |
-| Инженерия и объяснение (10 б.) | Офлайн-воспроизведение в Docker без сети (Python 3.11, 2 CPU, 4 ГБ RAM) и записка с измеренным разбором сбоев и ограничений | `Dockerfile`, `DESIGN.md` | `docker build -t finaudit-rl . && docker run --rm --network none --cpus 2 --memory 4g finaudit-rl` |
+| Инженерия и объяснение (10 б.) | Офлайн-воспроизведение в Docker без сети (Python 3.11, 2 CPU, 4 ГБ RAM) и записка с измеренным разбором сбоев и ограничений | `Dockerfile`, `DESIGN.md` | `docker build -t redline . && docker run --rm --network none --cpus 2 --memory 4g redline` |
 
 ## Быстрый smoke-тест `judge_adapter.py` (copy-paste)
 

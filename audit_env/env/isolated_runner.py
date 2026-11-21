@@ -571,7 +571,7 @@ class IsolatedEvaluatorHarness:
 
 
 def _main() -> None:
-    parser = argparse.ArgumentParser(description="FinAudit-RL isolated evaluator process")
+    parser = argparse.ArgumentParser(description="Redline isolated evaluator process")
     parser.add_argument("--report-out", type=Path, default=None)
     parser.add_argument("--allowed-episode-root", type=Path, default=None)
     parser.add_argument("--timeout-seconds", type=float, default=EPISODE_TIMEOUT_SECONDS)

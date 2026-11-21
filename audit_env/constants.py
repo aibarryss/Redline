@@ -1,4 +1,4 @@
-"""Constants, error types, and hard limits for FinAudit-RL."""
+"""Constants, error types, and hard limits for Redline."""
 
 from __future__ import annotations
 

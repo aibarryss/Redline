@@ -1,4 +1,4 @@
-"""Interactive step-by-step CLI demonstration of FinAudit-RL for hackathon showcase."""
+"""Interactive step-by-step CLI demonstration of Redline for hackathon showcase."""
 
 from __future__ import annotations
 
@@ -53,7 +53,7 @@ def run_demo(seed: int = 2026) -> None:
     bundle = generate_episode(seed=seed, config=cfg)
 
     print("=" * 74)
-    print("FinAudit-RL // LIVE DEMO (Offline Process-Isolated Audit Simulator)")
+    print("Redline // LIVE DEMO (Offline Process-Isolated Audit Simulator)")
     print("=" * 74)
     m = bundle.manifest
     p = bundle.policy
@@ -137,7 +137,7 @@ def run_demo(seed: int = 2026) -> None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run FinAudit-RL step-by-step CLI demo")
+    parser = argparse.ArgumentParser(description="Run Redline step-by-step CLI demo")
     parser.add_argument("--seed", type=int, default=2026)
     args = parser.parse_args()
     run_demo(seed=args.seed)

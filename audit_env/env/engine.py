@@ -1,4 +1,4 @@
-"""Core Gymnasium-style RL environment engine for FinAudit-RL."""
+"""Core Gymnasium-style RL environment engine for Redline."""
 
 from __future__ import annotations
 

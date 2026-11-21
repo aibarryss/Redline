@@ -1,4 +1,6 @@
-# FinAudit-RL
+# Redline
+
+Redline — RL-среда, в которой ИИ-аудитор ищет расхождения в учёте (дубли счетов, ошибки FX, смещение периода, неверное распределение платежей).
 
 Воспроизводимая офлайн RL-среда для оценки и потенциального дообучения ИИ-аудиторов (REC GENESIS Hackathon 2026 // FinTech).
 
@@ -59,8 +61,8 @@ python3 demo.py --seed 2026
 ## Запуск в Docker (офлайн)
 
 ```bash
-docker build -t finaudit-rl .
-docker run --rm --network none --cpus 2 --memory 4g finaudit-rl
+docker build -t redline .
+docker run --rm --network none --cpus 2 --memory 4g redline
 ```
 
 ## Запуск только тестов

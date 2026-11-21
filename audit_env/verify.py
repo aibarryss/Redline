@@ -267,7 +267,7 @@ def run_hidden_benchmark() -> dict[str, dict[str, float]]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="FinAudit-RL offline verification suite.")
+    parser = argparse.ArgumentParser(description="Redline offline verification suite.")
     parser.add_argument(
         "--check-only",
         action="store_true",

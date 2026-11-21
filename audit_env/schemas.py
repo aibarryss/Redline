@@ -1,4 +1,4 @@
-"""Data schemas, serialization, and strict validation for FinAudit-RL."""
+"""Data schemas, serialization, and strict validation for Redline."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""Base policy interface for FinAudit-RL."""
+"""Base policy interface for Redline."""
 
 from __future__ import annotations
 

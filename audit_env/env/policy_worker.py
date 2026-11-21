@@ -79,7 +79,7 @@ def _serve_worker(policy: BasePolicy) -> None:
 
 
 def _main() -> None:
-    parser = argparse.ArgumentParser(description="FinAudit-RL isolated policy worker process")
+    parser = argparse.ArgumentParser(description="Redline isolated policy worker process")
     parser.add_argument("--policy", required=True, choices=_ALLOWED_WORKER_POLICIES)
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()

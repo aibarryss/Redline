@@ -1,4 +1,4 @@
-"""Deterministic configuration fuzzer for FinAudit-RL episodes."""
+"""Deterministic configuration fuzzer for Redline episodes."""
 
 from __future__ import annotations
 
@@ -124,7 +124,7 @@ def run_fuzz(n: int = 200, seed: int = 20260101) -> tuple[int, int]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Deterministic episode configuration fuzzer for FinAudit-RL."
+        description="Deterministic episode configuration fuzzer for Redline."
     )
     parser.add_argument(
         "--n",
