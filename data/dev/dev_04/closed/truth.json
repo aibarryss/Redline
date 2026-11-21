@@ -1,0 +1,116 @@
+{
+  "episode_id": "ep_8f7b4d117d54",
+  "issues": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "I-61673912",
+        "I-FB573F50"
+      ],
+      "expected_amount_minor": 1022100,
+      "currency": "EUR",
+      "acceptable_evidence_sets": [
+        [
+          "DI-2431E52B",
+          "DI-3F5FF803",
+          "R-894E7911"
+        ],
+        [
+          "DI-2431E52B",
+          "DI-3F5FF803",
+          "R-392E9402"
+        ],
+        [
+          "DI-2431E52B",
+          "DI-3F5FF803",
+          "R-392E9402",
+          "R-894E7911"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "fx_rate_or_date_error",
+      "affected_ids": [
+        "I-61673912",
+        "R-D77C578B",
+        "R-D9C56257"
+      ],
+      "expected_amount_minor": 33352,
+      "currency": "USD",
+      "acceptable_evidence_sets": [
+        [
+          "DI-3F5FF803",
+          "FX-2026-01-19-EUR-USD",
+          "R-D9C56257"
+        ],
+        [
+          "DI-3F5FF803",
+          "FX-2026-01-19-EUR-USD",
+          "R-D77C578B"
+        ],
+        [
+          "DI-3F5FF803",
+          "FX-2026-01-19-EUR-USD",
+          "R-D77C578B",
+          "R-D9C56257"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "payment_allocation_mismatch",
+      "affected_ids": [
+        "I-61673912",
+        "P-FF43EEA8"
+      ],
+      "expected_amount_minor": 423200,
+      "currency": "EUR",
+      "acceptable_evidence_sets": [
+        [
+          "DI-3F5FF803",
+          "DP-CC9342EB",
+          "R-EBBFCF51"
+        ],
+        [
+          "DI-3F5FF803",
+          "DP-CC9342EB",
+          "R-F3847D5C"
+        ],
+        [
+          "DI-3F5FF803",
+          "DP-CC9342EB",
+          "R-EBBFCF51",
+          "R-F3847D5C"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "cutoff_period_error",
+      "affected_ids": [
+        "I-1DAAFBFC",
+        "R-B427F958",
+        "R-E64232B0"
+      ],
+      "expected_amount_minor": 162926,
+      "currency": "USD",
+      "acceptable_evidence_sets": [
+        [
+          "DI-6DE73311",
+          "R-E64232B0"
+        ],
+        [
+          "DI-6DE73311",
+          "R-B427F958"
+        ],
+        [
+          "DI-6DE73311",
+          "R-B427F958",
+          "R-E64232B0"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "episode_id": "ep_4c9d54de7bbc",
+  "issues": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "fx_rate_or_date_error",
+      "affected_ids": [
+        "I-F5C9053F",
+        "R-55341D8D",
+        "R-9EAAAB11"
+      ],
+      "expected_amount_minor": 2907617,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DI-533DF791",
+          "FX-2026-02-18-EUR-KZT",
+          "R-9EAAAB11"
+        ],
+        [
+          "DI-533DF791",
+          "FX-2026-02-18-EUR-KZT",
+          "R-55341D8D"
+        ],
+        [
+          "DI-533DF791",
+          "FX-2026-02-18-EUR-KZT",
+          "R-55341D8D",
+          "R-9EAAAB11"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "I-3726C936",
+        "I-DD5ED5B9"
+      ],
+      "expected_amount_minor": 483100,
+      "currency": "EUR",
+      "acceptable_evidence_sets": [
+        [
+          "DI-0FE497CE",
+          "DI-26E9DECF",
+          "R-7DB0723C"
+        ],
+        [
+          "DI-0FE497CE",
+          "DI-26E9DECF",
+          "R-E0A85937"
+        ],
+        [
+          "DI-0FE497CE",
+          "DI-26E9DECF",
+          "R-7DB0723C",
+          "R-E0A85937"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "I-21C1BA4F",
+        "I-7978080C"
+      ],
+      "expected_amount_minor": 41000,
+      "currency": "GBP",
+      "acceptable_evidence_sets": [
+        [
+          "DI-0972CDF7",
+          "DI-21E3E552",
+          "R-92E73E3D"
+        ],
+        [
+          "DI-0972CDF7",
+          "DI-21E3E552",
+          "R-E96C7E7D"
+        ],
+        [
+          "DI-0972CDF7",
+          "DI-21E3E552",
+          "R-92E73E3D",
+          "R-E96C7E7D"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "payment_allocation_mismatch",
+      "affected_ids": [
+        "I-278E12B3",
+        "P-69B6AF76"
+      ],
+      "expected_amount_minor": 14218025,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DI-3422F373",
+          "DP-E732F0A3",
+          "R-D7EA9A03"
+        ],
+        [
+          "DI-3422F373",
+          "DP-E732F0A3",
+          "R-B2DA5E91"
+        ],
+        [
+          "DI-3422F373",
+          "DP-E732F0A3",
+          "R-B2DA5E91",
+          "R-D7EA9A03"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-005",
+      "type": "cutoff_period_error",
+      "affected_ids": [
+        "I-19DFA1DB",
+        "R-162385F9",
+        "R-74C434D6"
+      ],
+      "expected_amount_minor": 36239200,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DI-5A9F306D",
+          "R-162385F9"
+        ],
+        [
+          "DI-5A9F306D",
+          "R-74C434D6"
+        ],
+        [
+          "DI-5A9F306D",
+          "R-162385F9",
+          "R-74C434D6"
+        ]
+      ]
+    }
+  ]
+}

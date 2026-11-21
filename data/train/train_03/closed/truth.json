@@ -1,0 +1,116 @@
+{
+  "episode_id": "ep_92003cf7929a",
+  "issues": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "cutoff_period_error",
+      "affected_ids": [
+        "P-D321A6DF",
+        "R-21CCF129",
+        "R-F94BC195"
+      ],
+      "expected_amount_minor": 373061737,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DP-A64C9AB5",
+          "R-21CCF129"
+        ],
+        [
+          "DP-A64C9AB5",
+          "R-F94BC195"
+        ],
+        [
+          "DP-A64C9AB5",
+          "R-21CCF129",
+          "R-F94BC195"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "fx_rate_or_date_error",
+      "affected_ids": [
+        "I-E627FE66",
+        "R-889AEE93",
+        "R-EDAADD62"
+      ],
+      "expected_amount_minor": 6227766,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DI-2BD6800B",
+          "FX-2026-03-21-GBP-KZT",
+          "R-889AEE93"
+        ],
+        [
+          "DI-2BD6800B",
+          "FX-2026-03-21-GBP-KZT",
+          "R-EDAADD62"
+        ],
+        [
+          "DI-2BD6800B",
+          "FX-2026-03-21-GBP-KZT",
+          "R-889AEE93",
+          "R-EDAADD62"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "payment_allocation_mismatch",
+      "affected_ids": [
+        "I-E627FE66",
+        "P-D321A6DF"
+      ],
+      "expected_amount_minor": 231216,
+      "currency": "GBP",
+      "acceptable_evidence_sets": [
+        [
+          "DI-2BD6800B",
+          "DP-A64C9AB5",
+          "R-21CCF129"
+        ],
+        [
+          "DI-2BD6800B",
+          "DP-A64C9AB5",
+          "R-F94BC195"
+        ],
+        [
+          "DI-2BD6800B",
+          "DP-A64C9AB5",
+          "R-21CCF129",
+          "R-F94BC195"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "I-128961A3",
+        "I-279921B8"
+      ],
+      "expected_amount_minor": 1511800,
+      "currency": "GBP",
+      "acceptable_evidence_sets": [
+        [
+          "DI-7D5DD9EB",
+          "DI-F62740D2",
+          "R-7F148C14"
+        ],
+        [
+          "DI-7D5DD9EB",
+          "DI-F62740D2",
+          "R-EA3DF32A"
+        ],
+        [
+          "DI-7D5DD9EB",
+          "DI-F62740D2",
+          "R-7F148C14",
+          "R-EA3DF32A"
+        ]
+      ]
+    }
+  ]
+}

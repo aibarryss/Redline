@@ -1,0 +1,153 @@
+{
+  "episode_id": "ep_4c9d54de7bbc",
+  "config_version": "1.0.0",
+  "clean_balance_check": {
+    "balanced": true,
+    "total_debit_minor": 17768100084,
+    "total_credit_minor": 17768100084,
+    "clean_ledger_rows": 252
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-A1008347",
+      "payment_ids": [
+        "P-F2A7A773",
+        "P-CDF9D14E",
+        "P-4D58312A"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-D74270CB",
+      "payment_ids": [
+        "P-607A3FA6",
+        "P-3158ED07",
+        "P-1E0FF6EA"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-DD4584F3",
+      "payment_ids": [
+        "P-701BAEB8",
+        "P-7D309DB0",
+        "P-31E2C897"
+      ]
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-F4F694CD",
+      "refund_payment_id": "P-68411FF9"
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-DED9DECC",
+      "refund_payment_id": "P-E4FEEC1B"
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-C8DC0B0D",
+      "invoice_ids": [
+        "I-FE7B4695",
+        "I-D81764CB",
+        "I-D816AB4E"
+      ],
+      "amount_minor": 175800
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-B468CFE4",
+      "invoice_ids": [
+        "I-9D2F636B",
+        "I-13E4B7FB",
+        "I-EC6EAF61"
+      ],
+      "amount_minor": 60700
+    }
+  ],
+  "mutations": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "fx_rate_or_date_error",
+      "before": {
+        "invoice_id": "I-F5C9053F",
+        "true_base_minor": 957272881,
+        "policy_fx_date": "2026-02-18"
+      },
+      "after": {
+        "booked_base_minor": 960180498,
+        "wrong_fx_source": "2026-02-23",
+        "diff_minor": 2907617
+      },
+      "causal_note": "Invoice converted to base currency using wrong-date or distorted FX rate."
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "duplicate_invoice",
+      "before": {
+        "invoice_id": "I-3726C936",
+        "count": 1
+      },
+      "after": {
+        "duplicate_invoice_id": "I-DD5ED5B9",
+        "duplicate_doc_id": "DI-0FE497CE",
+        "duplicate_ledger_rows": [
+          "R-7DB0723C",
+          "R-E0A85937"
+        ]
+      },
+      "causal_note": "Duplicate invoice posted with identical counterparty, line items, and amount."
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "duplicate_invoice",
+      "before": {
+        "invoice_id": "I-7978080C",
+        "count": 1
+      },
+      "after": {
+        "duplicate_invoice_id": "I-21C1BA4F",
+        "duplicate_doc_id": "DI-21E3E552",
+        "duplicate_ledger_rows": [
+          "R-92E73E3D",
+          "R-E96C7E7D"
+        ]
+      },
+      "causal_note": "Duplicate invoice posted with identical counterparty, line items, and amount."
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "payment_allocation_mismatch",
+      "before": {
+        "payment_id": "P-69B6AF76",
+        "amount_minor": 70238500
+      },
+      "after": {
+        "payment_id": "P-69B6AF76",
+        "amount_minor": 56020475,
+        "unmatched_delta_minor": 14218025
+      },
+      "causal_note": "Partial payment document does not match full invoice allocation in ledger."
+    },
+    {
+      "issue_id": "ISSUE-005",
+      "type": "cutoff_period_error",
+      "boundary": "before_start",
+      "before": {
+        "target_id": "I-19DFA1DB",
+        "timestamp": "2026-01-27T13:33:00+00:00"
+      },
+      "after": {
+        "doc_timestamp_utc": "2025-12-31T22:52:00+00:00",
+        "doc_timestamp_company_tz": "2025-12-31T22:52:00+00:00",
+        "ledger_timestamp": "2026-01-01T04:38:00+00:00"
+      },
+      "causal_note": "Document occurred outside reporting period (before_start) in company timezone but was booked inside period."
+    }
+  ],
+  "transform_applied": {
+    "transform_seed": 102079,
+    "remapped_id_count": 529
+  }
+}

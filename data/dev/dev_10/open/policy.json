@@ -1,0 +1,7 @@
+{
+  "fx_rate_date_rule": "payment_date",
+  "period_boundary_rule": "inclusive_start_exclusive_end",
+  "timezone": "Europe/London",
+  "rounding_mode": "ROUND_HALF_EVEN",
+  "amount_tolerance_minor": 0
+}

@@ -1,0 +1,116 @@
+{
+  "episode_id": "ep_73561e6cfba0",
+  "issues": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "cutoff_period_error",
+      "affected_ids": [
+        "P-3BCBADDF",
+        "R-009AA632",
+        "R-57F2AA09"
+      ],
+      "expected_amount_minor": 303590375,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DP-49A3557F",
+          "R-57F2AA09"
+        ],
+        [
+          "DP-49A3557F",
+          "R-009AA632"
+        ],
+        [
+          "DP-49A3557F",
+          "R-009AA632",
+          "R-57F2AA09"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "fx_rate_or_date_error",
+      "affected_ids": [
+        "I-604DF76B",
+        "R-1EE39BC6",
+        "R-419A0BDB"
+      ],
+      "expected_amount_minor": 3144624,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DI-D3734AE9",
+          "FX-2026-02-25-GBP-KZT",
+          "R-419A0BDB"
+        ],
+        [
+          "DI-D3734AE9",
+          "FX-2026-02-25-GBP-KZT",
+          "R-1EE39BC6"
+        ],
+        [
+          "DI-D3734AE9",
+          "FX-2026-02-25-GBP-KZT",
+          "R-1EE39BC6",
+          "R-419A0BDB"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "payment_allocation_mismatch",
+      "affected_ids": [
+        "I-604DF76B",
+        "P-3BCBADDF"
+      ],
+      "expected_amount_minor": 132391,
+      "currency": "GBP",
+      "acceptable_evidence_sets": [
+        [
+          "DI-D3734AE9",
+          "DP-49A3557F",
+          "R-57F2AA09"
+        ],
+        [
+          "DI-D3734AE9",
+          "DP-49A3557F",
+          "R-009AA632"
+        ],
+        [
+          "DI-D3734AE9",
+          "DP-49A3557F",
+          "R-009AA632",
+          "R-57F2AA09"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "I-5C36DCA9",
+        "I-9F4F8915"
+      ],
+      "expected_amount_minor": 33300,
+      "currency": "USD",
+      "acceptable_evidence_sets": [
+        [
+          "DI-149C3761",
+          "DI-43D2B990",
+          "R-2F4691D3"
+        ],
+        [
+          "DI-149C3761",
+          "DI-43D2B990",
+          "R-753FECFB"
+        ],
+        [
+          "DI-149C3761",
+          "DI-43D2B990",
+          "R-2F4691D3",
+          "R-753FECFB"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "config_version": "1.0.0",
+  "episode_id": "ep_1ab6f78a25bf",
+  "base_currency": "USD",
+  "currency_exponents": {
+    "EUR": 2,
+    "GBP": 2,
+    "KZT": 2,
+    "USD": 2
+  },
+  "period_start": "2026-01-01T00:00:00+05:00",
+  "period_end": "2026-04-01T00:00:00+05:00",
+  "timezone": "Asia/Almaty",
+  "counts": {
+    "ledger": 252,
+    "invoices": 59,
+    "payments": 67,
+    "fx": 333
+  },
+  "rounding_rule": "ROUND_HALF_UP",
+  "amount_tolerance_minor": 0
+}

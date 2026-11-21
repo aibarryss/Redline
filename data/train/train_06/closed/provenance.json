@@ -1,0 +1,153 @@
+{
+  "episode_id": "ep_3bee68be7ae6",
+  "config_version": "1.0.0",
+  "clean_balance_check": {
+    "balanced": true,
+    "total_debit_minor": 20928769400,
+    "total_credit_minor": 20928769400,
+    "clean_ledger_rows": 252
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-AA40499D",
+      "payment_ids": [
+        "P-8BE714D6",
+        "P-4D3E174F",
+        "P-28109DBF"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-C8178074",
+      "payment_ids": [
+        "P-967587AA",
+        "P-74FC7198",
+        "P-BD51593F"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-71775A81",
+      "payment_ids": [
+        "P-A4F769EF",
+        "P-D91AC081",
+        "P-742094DB"
+      ]
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-678D9EC1",
+      "refund_payment_id": "P-14D2CF0A"
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-EB62D3C1",
+      "refund_payment_id": "P-445F36B5"
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-33E33504",
+      "invoice_ids": [
+        "I-D4417A0F",
+        "I-4B602CDB",
+        "I-DF78BFF2"
+      ],
+      "amount_minor": 124800
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-6B04C936",
+      "invoice_ids": [
+        "I-D9CF10D5",
+        "I-15BA1D94",
+        "I-B7EE9CAF"
+      ],
+      "amount_minor": 130900
+    }
+  ],
+  "mutations": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "fx_rate_or_date_error",
+      "before": {
+        "invoice_id": "I-C7D4FF5E",
+        "true_base_minor": 719003138,
+        "policy_fx_date": "2026-01-31"
+      },
+      "after": {
+        "booked_base_minor": 743063094,
+        "wrong_fx_source": "2026-02-05",
+        "diff_minor": 24059956
+      },
+      "causal_note": "Invoice converted to base currency using wrong-date or distorted FX rate."
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "duplicate_invoice",
+      "before": {
+        "invoice_id": "I-1EC2ED0E",
+        "count": 1
+      },
+      "after": {
+        "duplicate_invoice_id": "I-35A07509",
+        "duplicate_doc_id": "DI-082DF74F",
+        "duplicate_ledger_rows": [
+          "R-AE108EE3",
+          "R-482D2673"
+        ]
+      },
+      "causal_note": "Duplicate invoice posted with identical counterparty, line items, and amount."
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "duplicate_invoice",
+      "before": {
+        "invoice_id": "I-4FE6855E",
+        "count": 1
+      },
+      "after": {
+        "duplicate_invoice_id": "I-F81E965A",
+        "duplicate_doc_id": "DI-D66A7C87",
+        "duplicate_ledger_rows": [
+          "R-2D8CB7B4",
+          "R-4AD3BB73"
+        ]
+      },
+      "causal_note": "Duplicate invoice posted with identical counterparty, line items, and amount."
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "payment_allocation_mismatch",
+      "before": {
+        "payment_id": "P-9F91D70D",
+        "amount_minor": 21234500
+      },
+      "after": {
+        "payment_id": "P-9F91D70D",
+        "amount_minor": 16049928,
+        "unmatched_delta_minor": 5184572
+      },
+      "causal_note": "Partial payment document does not match full invoice allocation in ledger."
+    },
+    {
+      "issue_id": "ISSUE-005",
+      "type": "cutoff_period_error",
+      "boundary": "before_start",
+      "before": {
+        "target_id": "I-B2CBC342",
+        "timestamp": "2026-01-15T10:59:00+00:00"
+      },
+      "after": {
+        "doc_timestamp_utc": "2025-12-31T20:40:00+00:00",
+        "doc_timestamp_company_tz": "2025-12-31T20:40:00+00:00",
+        "ledger_timestamp": "2026-01-01T02:20:00+00:00"
+      },
+      "causal_note": "Document occurred outside reporting period (before_start) in company timezone but was booked inside period."
+    }
+  ],
+  "transform_applied": {
+    "transform_seed": 101079,
+    "remapped_id_count": 528
+  }
+}

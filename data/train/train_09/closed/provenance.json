@@ -1,0 +1,150 @@
+{
+  "episode_id": "ep_7621b0ef6cbf",
+  "config_version": "1.0.0",
+  "clean_balance_check": {
+    "balanced": true,
+    "total_debit_minor": 19229551200,
+    "total_credit_minor": 19229551200,
+    "clean_ledger_rows": 252
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-6070F8C0",
+      "payment_ids": [
+        "P-E82AC566",
+        "P-72112806",
+        "P-585CA9E7"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-83ED1893",
+      "payment_ids": [
+        "P-B6AD2ACB",
+        "P-B73ABB4B",
+        "P-283F2AA3"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-D9379408",
+      "payment_ids": [
+        "P-4EB5ADB3",
+        "P-22E5F233",
+        "P-CFF28B75"
+      ]
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-20A16EB9",
+      "refund_payment_id": "P-407DDFAF"
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-4D1BCF63",
+      "refund_payment_id": "P-0175A7AA"
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-FCB2E57F",
+      "invoice_ids": [
+        "I-A49AC5E1",
+        "I-0D4E0CE5",
+        "I-4ADC7985"
+      ],
+      "amount_minor": 97300
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-23E85147",
+      "invoice_ids": [
+        "I-7911DE76",
+        "I-D0D14F01",
+        "I-01932036"
+      ],
+      "amount_minor": 104700
+    }
+  ],
+  "mutations": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "fx_rate_or_date_error",
+      "before": {
+        "invoice_id": "I-6A2AF3D5",
+        "true_base_minor": 309604769,
+        "policy_fx_date": "2026-03-20"
+      },
+      "after": {
+        "booked_base_minor": 315636203,
+        "wrong_fx_source": "2026-03-25",
+        "diff_minor": 6031434
+      },
+      "causal_note": "Invoice converted to base currency using wrong-date or distorted FX rate."
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "duplicate_invoice",
+      "before": {
+        "invoice_id": "I-C37E4EFC",
+        "count": 1
+      },
+      "after": {
+        "duplicate_invoice_id": "I-16E260EB",
+        "duplicate_doc_id": "DI-650FB95B",
+        "duplicate_ledger_rows": [
+          "R-7506E537",
+          "R-2B4A97A2"
+        ]
+      },
+      "causal_note": "Duplicate invoice posted with identical counterparty, line items, and amount."
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "payment_allocation_mismatch",
+      "before": {
+        "payment_id": "P-72DA2CD9",
+        "amount_minor": 10170000
+      },
+      "after": {
+        "payment_id": "P-72DA2CD9",
+        "amount_minor": 6833100,
+        "unmatched_delta_minor": 3336900
+      },
+      "causal_note": "Partial payment document does not match full invoice allocation in ledger."
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "payment_allocation_mismatch",
+      "before": {
+        "payment_id": "P-E8559AB4",
+        "amount_minor": 55909000
+      },
+      "after": {
+        "payment_id": "P-E8559AB4",
+        "amount_minor": 32949259,
+        "unmatched_delta_minor": 22959741
+      },
+      "causal_note": "Partial payment document does not match full invoice allocation in ledger."
+    },
+    {
+      "issue_id": "ISSUE-005",
+      "type": "cutoff_period_error",
+      "boundary": "after_end",
+      "before": {
+        "target_id": "I-76467745",
+        "timestamp": "2026-01-28T12:01:00+05:00"
+      },
+      "after": {
+        "doc_timestamp_utc": "2026-03-31T21:18:00+00:00",
+        "doc_timestamp_company_tz": "2026-04-01T02:18:00+05:00",
+        "ledger_timestamp": "2026-03-31T19:24:00+05:00"
+      },
+      "causal_note": "Document occurred outside reporting period (after_end) in company timezone but was booked inside period."
+    }
+  ],
+  "transform_applied": {
+    "transform_seed": 101130,
+    "remapped_id_count": 526
+  }
+}

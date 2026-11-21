@@ -1,0 +1,74 @@
+{
+  "episode_id": "ep_4165dedc7f9d",
+  "config_version": "1.0.0",
+  "clean_balance_check": {
+    "balanced": true,
+    "total_debit_minor": 67316552,
+    "total_credit_minor": 67316552,
+    "clean_ledger_rows": 252
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-B45D50F5",
+      "payment_ids": [
+        "P-B857E257",
+        "P-E7400062",
+        "P-52E977E5"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-7715BA99",
+      "payment_ids": [
+        "P-128CA354",
+        "P-578C87EE",
+        "P-D7CC961C"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-9056B703",
+      "payment_ids": [
+        "P-37D00977",
+        "P-FD799DDE",
+        "P-F00AC9B0"
+      ]
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-01D2C429",
+      "refund_payment_id": "P-17760714"
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-8BBDDAF1",
+      "refund_payment_id": "P-FF7174A4"
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-0C8DEC8F",
+      "invoice_ids": [
+        "I-D0E5D51A",
+        "I-4BE40CF7",
+        "I-BB14BB65"
+      ],
+      "amount_minor": 135700
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-2105C6CD",
+      "invoice_ids": [
+        "I-0C2A02A8",
+        "I-11B794FE",
+        "I-3D444930"
+      ],
+      "amount_minor": 132100
+    }
+  ],
+  "mutations": [],
+  "transform_applied": {
+    "transform_seed": 100994,
+    "remapped_id_count": 522
+  }
+}

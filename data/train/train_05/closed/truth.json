@@ -1,0 +1,116 @@
+{
+  "episode_id": "ep_386861648bff",
+  "issues": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "cutoff_period_error",
+      "affected_ids": [
+        "P-ECDBCE47",
+        "R-A4928B32",
+        "R-E8999845"
+      ],
+      "expected_amount_minor": 133842,
+      "currency": "EUR",
+      "acceptable_evidence_sets": [
+        [
+          "DP-7DB18D82",
+          "R-E8999845"
+        ],
+        [
+          "DP-7DB18D82",
+          "R-A4928B32"
+        ],
+        [
+          "DP-7DB18D82",
+          "R-A4928B32",
+          "R-E8999845"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "fx_rate_or_date_error",
+      "affected_ids": [
+        "I-D8EE14F6",
+        "R-0A2BCD89",
+        "R-5713E78F"
+      ],
+      "expected_amount_minor": 318,
+      "currency": "EUR",
+      "acceptable_evidence_sets": [
+        [
+          "DI-2EB9412D",
+          "FX-2026-03-01-GBP-EUR",
+          "R-0A2BCD89"
+        ],
+        [
+          "DI-2EB9412D",
+          "FX-2026-03-01-GBP-EUR",
+          "R-5713E78F"
+        ],
+        [
+          "DI-2EB9412D",
+          "FX-2026-03-01-GBP-EUR",
+          "R-0A2BCD89",
+          "R-5713E78F"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "payment_allocation_mismatch",
+      "affected_ids": [
+        "I-D8EE14F6",
+        "P-ECDBCE47"
+      ],
+      "expected_amount_minor": 45797,
+      "currency": "GBP",
+      "acceptable_evidence_sets": [
+        [
+          "DI-2EB9412D",
+          "DP-7DB18D82",
+          "R-E8999845"
+        ],
+        [
+          "DI-2EB9412D",
+          "DP-7DB18D82",
+          "R-A4928B32"
+        ],
+        [
+          "DI-2EB9412D",
+          "DP-7DB18D82",
+          "R-A4928B32",
+          "R-E8999845"
+        ]
+      ]
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "I-919BF116",
+        "I-98827825"
+      ],
+      "expected_amount_minor": 70666800,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        [
+          "DI-1398C272",
+          "DI-C1BDD97B",
+          "R-EB661C2F"
+        ],
+        [
+          "DI-1398C272",
+          "DI-C1BDD97B",
+          "R-3107408D"
+        ],
+        [
+          "DI-1398C272",
+          "DI-C1BDD97B",
+          "R-3107408D",
+          "R-EB661C2F"
+        ]
+      ]
+    }
+  ]
+}

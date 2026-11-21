@@ -1,0 +1,7 @@
+{
+  "fx_rate_date_rule": "invoice_issue_date",
+  "period_boundary_rule": "inclusive_start_exclusive_end",
+  "timezone": "America/New_York",
+  "rounding_mode": "ROUND_HALF_UP",
+  "amount_tolerance_minor": 0
+}

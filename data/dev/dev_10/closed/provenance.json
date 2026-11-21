@@ -1,0 +1,153 @@
+{
+  "episode_id": "ep_35020f24cd47",
+  "config_version": "1.0.0",
+  "clean_balance_check": {
+    "balanced": true,
+    "total_debit_minor": 68225026,
+    "total_credit_minor": 68225026,
+    "clean_ledger_rows": 252
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-DB10BC7F",
+      "payment_ids": [
+        "P-ABBE3D67",
+        "P-6FAEE13A",
+        "P-B3A07804"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-1D836487",
+      "payment_ids": [
+        "P-406F45E0",
+        "P-0211E22F",
+        "P-B066F0D7"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice_id": "I-C9AB0CD8",
+      "payment_ids": [
+        "P-C8FAB22A",
+        "P-BD18F27A",
+        "P-044B049A"
+      ]
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-03E30D81",
+      "refund_payment_id": "P-EE37C966"
+    },
+    {
+      "kind": "legitimate_refund",
+      "invoice_id": "I-4205BA8E",
+      "refund_payment_id": "P-FA6444E3"
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-634102B6",
+      "invoice_ids": [
+        "I-7214CFF3",
+        "I-3F8E38FB",
+        "I-083822CB"
+      ],
+      "amount_minor": 133800
+    },
+    {
+      "kind": "recurring_legitimate_charges",
+      "entity_id": "E-EAF0D4F6",
+      "invoice_ids": [
+        "I-8776944D",
+        "I-D721C813",
+        "I-AC0360B5"
+      ],
+      "amount_minor": 85400
+    }
+  ],
+  "mutations": [
+    {
+      "issue_id": "ISSUE-001",
+      "type": "fx_rate_or_date_error",
+      "before": {
+        "invoice_id": "I-213A0204",
+        "true_base_minor": 1010831,
+        "policy_fx_date": "2026-03-07"
+      },
+      "after": {
+        "booked_base_minor": 1012864,
+        "wrong_fx_source": "2026-03-12",
+        "diff_minor": 2033
+      },
+      "causal_note": "Invoice converted to base currency using wrong-date or distorted FX rate."
+    },
+    {
+      "issue_id": "ISSUE-002",
+      "type": "duplicate_invoice",
+      "before": {
+        "invoice_id": "I-572D213F",
+        "count": 1
+      },
+      "after": {
+        "duplicate_invoice_id": "I-15048E9F",
+        "duplicate_doc_id": "DI-CD0B2591",
+        "duplicate_ledger_rows": [
+          "R-10642F9B",
+          "R-4383B635"
+        ]
+      },
+      "causal_note": "Duplicate invoice posted with identical counterparty, line items, and amount."
+    },
+    {
+      "issue_id": "ISSUE-003",
+      "type": "duplicate_invoice",
+      "before": {
+        "invoice_id": "I-39FB1CE1",
+        "count": 1
+      },
+      "after": {
+        "duplicate_invoice_id": "I-BC7656BB",
+        "duplicate_doc_id": "DI-6205984C",
+        "duplicate_ledger_rows": [
+          "R-66087A04",
+          "R-FE00DF73"
+        ]
+      },
+      "causal_note": "Duplicate invoice posted with identical counterparty, line items, and amount."
+    },
+    {
+      "issue_id": "ISSUE-004",
+      "type": "payment_allocation_mismatch",
+      "before": {
+        "payment_id": "P-C5E8446B",
+        "amount_minor": 69294800
+      },
+      "after": {
+        "payment_id": "P-C5E8446B",
+        "amount_minor": 47245141,
+        "unmatched_delta_minor": 22049659
+      },
+      "causal_note": "Partial payment document does not match full invoice allocation in ledger."
+    },
+    {
+      "issue_id": "ISSUE-005",
+      "type": "cutoff_period_error",
+      "boundary": "before_start",
+      "before": {
+        "target_id": "I-B9B65D51",
+        "timestamp": "2026-01-06T11:17:00+00:00"
+      },
+      "after": {
+        "doc_timestamp_utc": "2025-12-31T20:19:00+00:00",
+        "doc_timestamp_company_tz": "2025-12-31T20:19:00+00:00",
+        "ledger_timestamp": "2026-01-01T04:41:00+00:00"
+      },
+      "causal_note": "Document occurred outside reporting period (before_start) in company timezone but was booked inside period."
+    }
+  ],
+  "transform_applied": {
+    "transform_seed": 102147,
+    "remapped_id_count": 530
+  }
+}
