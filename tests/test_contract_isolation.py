@@ -656,8 +656,16 @@ class TestContractAndIsolation(unittest.TestCase):
         # Inside Docker (root evaluator + unprivileged 'agent' worker), verify the worker cannot
         # read a 0600 closed/truth.json or the evaluator's private report directory.
         worker_user = os.environ.get("FINAUDIT_WORKER_USER", "").strip()
-        if not worker_user or not hasattr(os, "geteuid") or os.geteuid() != 0:
-            # Verify non-root fallback still executes cleanly with worker_user set
+        has_worker_user = False
+        if worker_user:
+            import pwd
+            try:
+                pwd.getpwnam(worker_user)
+                has_worker_user = True
+            except KeyError:
+                has_worker_user = False
+        if not has_worker_user or not hasattr(os, "geteuid") or os.geteuid() != 0:
+            # Verify fallback still executes cleanly when non-root or worker user is absent
             with IsolatedEvaluatorHarness(worker_user="agent") as harness:
                 rep = harness.run_policy_subprocess("simple_reconciler", seed=118, mode="eval")
                 self.assertEqual(rep["f1"], 1.0)
